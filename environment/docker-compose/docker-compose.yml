@@ -1,0 +1,32 @@
+---
+version: '3'
+services:
+
+  mysql:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ntpartner
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbuser
+    volumes:
+      - /var/lib/mysql
+
+  ntpartner:
+    image: ue.app/ntpartner:${VERSION_APP}
+    build:
+      context: ../../build/artifact/docker
+      args:
+        VERSION: ${VERSION_APP}
+    environment:
+      DB_HOSTNAME: mysql
+      DB_PORT: 3306
+      DB_NAME: ntpartner
+      DB_USERNAME: dbuser
+      DB_PASSWORD: dbuser
+    depends_on:
+    - mysql
+
+networks:
+  default:
+...

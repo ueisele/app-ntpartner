@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    # Database connection
+    jdbcUrl: jdbc:mysql://${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}?useSSL=false&createDatabaseIfNotExist=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    initialization-mode: always
+  jpa:
+    # Show or not log for each sql query
+    show-sql: true
+    # Naming strategy
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+    # Allows Hibernate to generate SQL optimized for a particular DBMS
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect

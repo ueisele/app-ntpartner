@@ -1,0 +1,17 @@
+= Docker-Compose Deployment
+
+Docker-Compose Deployment is based on `docker-compose`. It provides the required systems to run NTPartner, i.e. MySql.
+
+== Usage
+TIP: All commands are location-aware, i.e. you may run `environment/docker-compose/up.sh` with `$PWD` being the project root directory.
+
+`up.sh`::
+    Starts the infrastructure and the app.
+`docker-ips.sh`::
+    Displays the IPs of the containers of the environment.
+`down.sh`::
+    Stops the cluster and removes all resources (containers, network).
+`stop.sh`::
+    Stops the cluster, does not remove the cluster.
+`docker-compose-env.sh <docker-compose command>`::
+    Convenience command to run docker-compose command against this environment (e.g. ./docker-compose-env.sh ps).
