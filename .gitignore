@@ -23,6 +23,9 @@
 hs_err_pid*
 
 /.idea
-/.gradle
 /out
 /target
+
+/.gradle
+.gradletasknamecache
+!/gradle-wrapper.jar
