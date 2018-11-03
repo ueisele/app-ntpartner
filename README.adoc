@@ -1,1 +1,7 @@
 # NT Partner
+
+## Examples
+- https://github.com/boylegu/SpringBoot-vue
+- https://github.com/jonashackt/spring-boot-vuejs
+- https://blog.monkey.codes/how-to-build-a-chat-app-using-webflux-websockets-react/
+- https://github.com/monkey-codes/java-reactive-chat
